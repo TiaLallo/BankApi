@@ -13,6 +13,12 @@ namespace BankApi.Models
             Customer = new HashSet<Customer>();
         }
 
+        public Bank(string name, string bic)
+        {
+            Name = name;
+            Bic = bic;
+        }
+
         public long Id { get; set; }
         [Required]
         [StringLength(50)]
