@@ -22,17 +22,18 @@ namespace BankApi.Repositories
             return customer;
         }
 
-        public Customer Delete(int id)
+        public void Delete(int id)
         {
             var customer = Read(id);
             _context.Remove(customer);
             _context.SaveChanges();
-            return 
+            return;
         }
 
         public List<Customer> Read()
         {
-            throw new NotImplementedException();
+            return _context.Customer
+                .ToList();
         }
 
         public List<Account> Read(int CustomerId)
@@ -41,9 +42,11 @@ namespace BankApi.Repositories
                 .ToList();
         }
 
-        public Customer Update(Customer customer)
+        public Customer Update(int id, Customer customer)
         {
-            throw new NotImplementedException();
+            _context.Update(customer);
+            _context.SaveChanges();
+            return customer;
         }
     }
 }

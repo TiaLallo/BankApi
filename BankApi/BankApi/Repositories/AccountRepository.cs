@@ -23,12 +23,11 @@ namespace BankApi.Repositories
             return account;
         }
 
-        public Account Delete(string IBAN)
+        public void Delete(string IBAN)
         {
-            var account = Read(IBAN);
-            _context.Account.Remove(account);
+            _context.Remove(IBAN);
             _context.SaveChanges();
-            return;
+            return; 
         }
 
         public List<Account> Read()
@@ -40,7 +39,9 @@ namespace BankApi.Repositories
 
         public Account Update(string IBAN, Account account)
         {
-            throw new NotImplementedException();
+            _context.Update(account);
+            _context.SaveChanges();
+            return account;
         }
     }
 }
