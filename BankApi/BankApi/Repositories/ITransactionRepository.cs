@@ -7,7 +7,7 @@ namespace BankApi.Repositories
 {
     interface ITransactionRepository
     {
-        TransactionRepository Create(TransactionRepository transaction);
+        TransactionRepository Create(Transaction transaction);
         List<TransactionRepository> Read();
     }
 }
