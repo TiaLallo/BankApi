@@ -6,7 +6,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace BankApi.Models
 {
     public partial class Transaction
-    {
+    { 
+        public Transaction()
+        {
+
+        }
+
         public long Id { get; set; }
         [Required]
         [StringLength(10)]
