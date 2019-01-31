@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace BankApi.Repositories
 {
-    public class Account
+    public class TransactionRepository
     {
     }
 }
