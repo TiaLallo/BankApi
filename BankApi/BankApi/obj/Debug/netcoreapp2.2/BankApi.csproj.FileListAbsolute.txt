@@ -12,3 +12,17 @@ C:\Dev\BankApi\BankApi\BankApi\obj\Debug\netcoreapp2.2\BankApi.RazorTargetAssemb
 C:\Dev\BankApi\BankApi\BankApi\bin\Debug\netcoreapp2.2\BankApi.pdb
 C:\Dev\BankApi\BankApi\BankApi\obj\Debug\netcoreapp2.2\BankApi.dll
 C:\Dev\BankApi\BankApi\BankApi\obj\Debug\netcoreapp2.2\BankApi.pdb
+C:\Users\jani\Documents\BankApp\BankApi\BankApi\BankApi\bin\Debug\netcoreapp2.2\BankApi.deps.json
+C:\Users\jani\Documents\BankApp\BankApi\BankApi\BankApi\bin\Debug\netcoreapp2.2\BankApi.runtimeconfig.json
+C:\Users\jani\Documents\BankApp\BankApi\BankApi\BankApi\bin\Debug\netcoreapp2.2\BankApi.runtimeconfig.dev.json
+C:\Users\jani\Documents\BankApp\BankApi\BankApi\BankApi\bin\Debug\netcoreapp2.2\BankApi.dll
+C:\Users\jani\Documents\BankApp\BankApi\BankApi\BankApi\bin\Debug\netcoreapp2.2\BankApi.pdb
+C:\Users\jani\Documents\BankApp\BankApi\BankApi\BankApi\obj\Debug\netcoreapp2.2\BankApi.csprojAssemblyReference.cache
+C:\Users\jani\Documents\BankApp\BankApi\BankApi\BankApi\obj\Debug\netcoreapp2.2\BankApi.csproj.CoreCompileInputs.cache
+C:\Users\jani\Documents\BankApp\BankApi\BankApi\BankApi\obj\Debug\netcoreapp2.2\BankApi.RazorAssemblyInfo.cache
+C:\Users\jani\Documents\BankApp\BankApi\BankApi\BankApi\obj\Debug\netcoreapp2.2\BankApi.RazorAssemblyInfo.cs
+C:\Users\jani\Documents\BankApp\BankApi\BankApi\BankApi\obj\Debug\netcoreapp2.2\BankApi.AssemblyInfoInputs.cache
+C:\Users\jani\Documents\BankApp\BankApi\BankApi\BankApi\obj\Debug\netcoreapp2.2\BankApi.AssemblyInfo.cs
+C:\Users\jani\Documents\BankApp\BankApi\BankApi\BankApi\obj\Debug\netcoreapp2.2\BankApi.RazorTargetAssemblyInfo.cache
+C:\Users\jani\Documents\BankApp\BankApi\BankApi\BankApi\obj\Debug\netcoreapp2.2\BankApi.dll
+C:\Users\jani\Documents\BankApp\BankApi\BankApi\BankApi\obj\Debug\netcoreapp2.2\BankApi.pdb
