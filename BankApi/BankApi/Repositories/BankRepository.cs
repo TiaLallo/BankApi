@@ -9,20 +9,30 @@ namespace BankApi.Repositories
 
     public class BankRepository : IBankRepository
     {
+        private readonly BankdbContext _context;
+
+        public BankRepository(BankdbContext context)
+        {
+            _context = context;
+        }
 
         public Bank Create(Bank bank)
         {
-            throw new NotImplementedException();
+            _context.Bank.Add(bank);
+            _context.SaveChanges();
+            return bank;
         }
 
         public Bank Delete(Bank bank)
         {
-            throw new NotImplementedException();
+            _context.Bank.Remove(bank);
+            _context.SaveChanges();
+            return bank;
         }
 
         public List<Bank> Read()
         {
-            throw new NotImplementedException();
+            
         }
 
         public Bank Read(int id)
@@ -32,7 +42,9 @@ namespace BankApi.Repositories
 
         public Bank Update(Bank bank)
         {
-            throw new NotImplementedException();
+            _context.Bank.Update(bank);
+            _context.SaveChanges();
+            return bank;
         }
     }
 }
