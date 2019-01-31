@@ -8,9 +8,10 @@ namespace BankApi.Repositories
 {
     interface ICustomerRepository
     {
-        CustomerRepository Create(CustomerRepository customer);
-        List<CustomerRepository> Read();
-        CustomerRepository Update(CustomerRepository customer);
-        CustomerRepository Delete(int id);
+        Customer Create(Customer customer);
+        List<Customer> Read();
+        List<Account> Read(int CustomerId);
+        Customer Update(Customer customer);
+        Customer Delete(int id);
     }
 }

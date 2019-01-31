@@ -12,6 +12,6 @@ namespace BankApi.Repositories
         List<Bank> Read();
         Bank Read(int id);
         Bank Update(Bank bank);
-        Bank Delete(Bank bank);
+        Bank Delete(int id);
     }
 }

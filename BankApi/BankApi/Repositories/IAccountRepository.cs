@@ -8,8 +8,10 @@ namespace BankApi.Repositories
 {
     interface IAccountRepository
     {
-        AccountRepository Create(AccountRepository account);
-        List<AccountRepository> Read();
-        AccountRepository Delete(AccountRepository account);
+        Account Create(Account account);
+        List<Account> Read();
+        Account Read(int IBAN);
+        Account Delete(string IBAN);
+        Account Update(string IBAN, Account account);
     }
 }

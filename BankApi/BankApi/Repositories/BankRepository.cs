@@ -23,8 +23,9 @@ namespace BankApi.Repositories
             return bank;
         }
 
-        public Bank Delete(Bank bank)
+        public Bank Delete(int id)
         {
+            var bank = Read(id);
             _context.Bank.Remove(bank);
             _context.SaveChanges();
             return bank;
@@ -32,12 +33,14 @@ namespace BankApi.Repositories
 
         public List<Bank> Read()
         {
-            
+            return _context.Bank
+                .ToList();
         }
 
         public Bank Read(int id)
         {
-            throw new NotImplementedException();
+            return _context.Bank
+                .FirstOrDefault(b => b.Id == id);
         }
 
         public Bank Update(Bank bank)
