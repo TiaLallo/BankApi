@@ -11,5 +11,6 @@ namespace BankApi.Controllers
     [ApiController]
     public class BankController : ControllerBase
     {
+
     }
 }
