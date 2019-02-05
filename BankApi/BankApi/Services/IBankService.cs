@@ -4,14 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using BankApi.Models;
 
-namespace BankApi.Repositories
+namespace BankApi.Services
 {
-    public interface IBankRepository
+    public interface IBankService
     {
         Bank Create(Bank bank);
         List<Bank> Read();
         Bank Read(int id);
         Bank Update(Bank bank, int id);
-        Bank Delete(int id);
+        void Delete(int id);
     }
 }

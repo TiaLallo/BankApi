@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BankApi.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BankApi.Repositories
 {
@@ -18,7 +19,7 @@ namespace BankApi.Repositories
 
         public Bank Create(Bank bank)
         {
-            _context.Bank.Add(bank);
+            _context.Add(bank);
             _context.SaveChanges();
             return bank;
         }
@@ -34,18 +35,20 @@ namespace BankApi.Repositories
         public List<Bank> Read()
         {
             return _context.Bank
+                .Include(p=> p.Customer)
                 .ToList();
         }
 
         public Bank Read(int id)
         {
             return _context.Bank
+                .Include(p=> p.Customer)
                 .FirstOrDefault(b => b.Id == id);
         }
 
-        public Bank Update(Bank bank)
+        public Bank Update(Bank bank, int id)
         {
-            _context.Bank.Update(bank);
+            _context.Update(bank);
             _context.SaveChanges();
             return bank;
         }

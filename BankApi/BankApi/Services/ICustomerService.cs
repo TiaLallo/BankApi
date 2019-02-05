@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using BankApi.Models;
 
-namespace BankApi.Repositories
+namespace BankApi.Services
 {
-    public interface ICustomerRepository
+    public interface ICustomerService
     {
         Customer Create(Customer customer);
         List<Customer> Read();

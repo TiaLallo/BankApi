@@ -4,13 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using BankApi.Models;
 
-namespace BankApi.Repositories
+namespace BankApi.Services
 {
-    interface IAccountRepository
+    public interface IAccountService
     {
         Account Create(Account account);
-        List<Account> Read(string iBAN);
-        void Delete(string IBAN);
+        List<Account> Read();
+        Account Read(string IBAN);
         Account Update(string IBAN, Account account);
+        void Delete(string IBAN);
     }
 }
