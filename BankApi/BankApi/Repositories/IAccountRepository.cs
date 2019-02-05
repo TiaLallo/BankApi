@@ -6,7 +6,7 @@ using BankApi.Models;
 
 namespace BankApi.Repositories
 {
-    interface IAccountRepository
+    public interface IAccountRepository
     {
         Account Create(Account account);
         List<Account> Read(string iBAN);

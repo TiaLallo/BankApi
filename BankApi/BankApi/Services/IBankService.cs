@@ -8,7 +8,7 @@ namespace BankApi.Services
 {
     public interface IBankService
     {
-        Bank Create(Bank bank);
+        Bank CreateBank(Bank bank);
         List<Bank> Read();
         Bank Read(int id);
         Bank Update(Bank bank, int id);

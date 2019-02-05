@@ -8,7 +8,7 @@ namespace BankApi.Services
 {
     public interface ICustomerService
     {
-        Customer Create(Customer customer);
+        Customer CreateCustomer(Customer customer);
         List<Customer> Read();
         Customer Read(int id);
         Customer Update(int id, Customer customer);

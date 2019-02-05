@@ -16,7 +16,7 @@ namespace BankApi.Services
             _customerRepository = customerRepository;
         }
 
-        public Customer Create(Customer customer)
+        public Customer CreateCustomer(Customer customer)
         {
             return _customerRepository.Create(customer);
         }

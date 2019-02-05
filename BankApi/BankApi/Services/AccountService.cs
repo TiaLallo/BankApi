@@ -16,7 +16,7 @@ namespace BankApi.Services
             _accountRepository = accountRepository;
         }
 
-        public Account Create(Account account)
+        public Account CreateAccount(Account account)
         {
             return _accountRepository.Create(account);
         }
