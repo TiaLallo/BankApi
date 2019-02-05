@@ -30,7 +30,7 @@ namespace BankApi.Repositories
             return; 
         }
 
-        public List<Account> Read()
+        public List<Account> Read(string IBAN)
         {
             return _context.Account
                 .Include(p => p.Transaction)
