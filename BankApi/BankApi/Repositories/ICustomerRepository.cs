@@ -6,11 +6,12 @@ using BankApi.Models;
 
 namespace BankApi.Repositories
 {
-    interface ICustomerRepository
+    public interface ICustomerRepository
     {
-        CustomerRepository Create(CustomerRepository customer);
-        List<CustomerRepository> Read();
-        CustomerRepository Update(CustomerRepository customer);
-        CustomerRepository Delete(int id);
+        Customer Create(Customer customer);
+        List<Customer> Read();
+        Customer Read(int id);
+        Customer Update(int id, Customer customer);
+        void Delete(int id);
     }
 }

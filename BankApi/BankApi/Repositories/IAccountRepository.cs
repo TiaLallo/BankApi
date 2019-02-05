@@ -6,10 +6,11 @@ using BankApi.Models;
 
 namespace BankApi.Repositories
 {
-    interface IAccountRepository
+    public interface IAccountRepository
     {
-        AccountRepository Create(AccountRepository account);
-        List<AccountRepository> Read();
-        AccountRepository Delete(AccountRepository account);
+        Account Create(Account account);
+        List<Account> Read(string iBAN);
+        void Delete(string IBAN);
+        Account Update(string IBAN, Account account);
     }
 }

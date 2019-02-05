@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BankApi.Repositories
 {
-    public class TransactionRepository
+    public class TransactionRepository : ITransactionRepository
     {
         private readonly BankdbContext _context;
 
@@ -16,14 +16,14 @@ namespace BankApi.Repositories
             _context = context;
         }
 
-        public Transaction Create(Transaction transaction)
+        public Transaction Create(Transaction transaction, int customerId)
         {
             _context.Transaction.Add(transaction);
             _context.SaveChanges();
             return transaction;
         }
 
-        public List<Transaction> Read(int Iban)
+        public List<Transaction> Read(int IBAN)
         {
             return _context.Transaction.AsNoTracking().ToList();
         }
