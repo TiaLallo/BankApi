@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BankApi.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BankApi.Repositories
 {
@@ -15,21 +16,32 @@ namespace BankApi.Repositories
             _context = context;
         }
 
-        public AccountRepository Create(AccountRepository account)
+        public Account Create(Account account)
         {
-            throw new NotImplementedException();
+            _context.Account.Add(account);
+            _context.SaveChanges();
+            return account;
         }
 
-        public AccountRepository Delete(AccountRepository account)
+        public void Delete(string IBAN)
         {
-            throw new NotImplementedException();
+            _context.Remove(IBAN);
+            _context.SaveChanges();
+            return; 
         }
-
-        public List<AccountRepository> Read()
+                                        
+        public List<Account> Read(string Iban)
         {
             return _context.Account
                 .Include(p => p.Transaction)
                 .ToList();
+        }
+
+        public Account Update(string IBAN, Account account)
+        {
+            _context.Update(account);
+            _context.SaveChanges();
+            return account;
         }
     }
 }
