@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BankApi.Repositories;
+using BankApi.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,6 +27,15 @@ namespace BankApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<IBankRepository, BankRepository>();
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<ITransactionRepository, TransactionRepository>();
+
+            services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<IBankService, BankService>();
+            services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<ITransactionService, TransactionService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
