@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BankApi.Repositories;
+using BankApi.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,6 +13,9 @@ namespace BankApi.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
+        private readonly IAccountRepository _accountRepo;
+        private readonly IAccountService _accountService;
+
         // GET: api/Account
         [HttpGet]
         public IEnumerable<string> Get()
