@@ -48,5 +48,10 @@ namespace BankApi.Services
                 return _customerRepository.Update(id, customer);
             }
         }
+
+        public Customer UpdatePassword(int id, string newPsw)
+        {
+            return _customerRepository.UpdatePsw(id, newPsw);
+        }
     }
 }

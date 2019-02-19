@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using BankApi.Services;
+using BankApi.Models;
 
 namespace BankApi.Controllers
 {
@@ -11,36 +13,25 @@ namespace BankApi.Controllers
     [ApiController]
     public class TransactionController : ControllerBase
     {
-        // GET: api/Transaction
+        private readonly ITransactionService _transactionService;
+
+        public TransactionController(ITransactionService  transactionService)
+        {
+            _transactionService = transactionService;
+        }
+
+        // GET: api/Transactions
         [HttpGet]
-        public IEnumerable<string> Get()
+        public ActionResult<List<Transaction>> GetTransactions(int IBAN)
         {
-            return new string[] { "value1", "value2" };
+            return new JsonResult(_transactionService.Read(IBAN));
         }
 
-        // GET: api/Transaction/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST: api/Transaction
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult<Transaction> Post(Transaction transaction, int customerId)
         {
+            return _transactionService.CreateTransaction(transaction, customerId);
         }
 
-        // PUT: api/Transaction/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }

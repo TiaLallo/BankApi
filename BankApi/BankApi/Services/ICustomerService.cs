@@ -13,5 +13,6 @@ namespace BankApi.Services
         Customer Read(int id);
         Customer Update(int id, Customer customer);
         void Delete(int id);
+        Customer UpdatePassword(int id, string newPsw);
     }
 }
