@@ -30,10 +30,10 @@ namespace BankApi.Repositories
             return; 
         }
                                         
-        public List<Account> Read(string Iban)
+        public List<Account> ReadBanksAccs(long bankId)
         {
-            return _context.Account
-                .Include(p => p.Transaction)
+            
+            return _context.Account.Where(x => x.BankId == bankId)
                 .ToList();
         }
 

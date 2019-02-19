@@ -52,5 +52,10 @@ namespace BankApi.Repositories
             _context.SaveChanges();
             return bank;
         }
+
+        public List<Customer> GetBankCustomers(long bank)
+        {
+            return _context.Customer.Where(p => p.BankId == bank).ToList();
+        }
     }
 }
