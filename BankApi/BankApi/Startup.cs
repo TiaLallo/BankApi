@@ -12,6 +12,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using BankApi.Services;
+using BankApi.Repositories;
 using BankApi.Models;
 
 namespace BankApi
@@ -38,6 +40,7 @@ namespace BankApi
             services.AddScoped<IBankService, BankService>();
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<ITransactionService, TransactionService>();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
