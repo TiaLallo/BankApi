@@ -9,7 +9,7 @@ namespace BankApi.Repositories
     public interface IAccountRepository
     {
         Account Create(Account account);
-        List<Account> Read(string iBAN);
+        List<Account> ReadBanksAccs(long bankId);
         void Delete(string IBAN);
         Account Update(string IBAN, Account account);
     }

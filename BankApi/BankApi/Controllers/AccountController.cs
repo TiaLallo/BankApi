@@ -13,14 +13,18 @@ namespace BankApi.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
-        private readonly IAccountRepository _accountRepo;
         private readonly IAccountService _accountService;
+
+        public AccountController(IAccountService accountService)
+        {
+            _accountService = accountService;
+        }
 
         // GET: api/Account
         [HttpGet]
-        public IEnumerable<string> Get()
+        public ActionResult GetBankAccs(long bankId)
         {
-            return new string[] { "value1", "value2" };
+            return new JsonResult(_accountService.);
         }
 
         // GET: api/Account/5
