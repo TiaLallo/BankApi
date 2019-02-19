@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using BankApi.Models;
 
 namespace BankApi
 {
@@ -31,6 +32,7 @@ namespace BankApi
             services.AddScoped<IBankRepository, BankRepository>();
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<ITransactionRepository, TransactionRepository>();
+            services.AddDbContext<BankdbContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("BankdbContext")));
 
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<IBankService, BankService>();
